@@ -8,7 +8,7 @@
   width: 50vw;
   height: 400px;
   margin: 0 auto;
-  perspective: 1000px;
+  perspective: 2000px;
 }
 
 .cube {
@@ -17,6 +17,7 @@
   position: relative;
   transform-style: preserve-3d;
   transition: all 1s;
+  box-shadow: 5px 5px solid #333;
 }
 
 .cube-face {
@@ -32,10 +33,18 @@
 .cube-face-front {
   background: linear-gradient(to bottom, rgb(107, 243, 223), rgb(16, 1, 114));
   color: var(--font);
-  transform: translateZ(200px);
+  transform: rotateY(0deg) translateZ(200px);
 }
 .cube.show-front {
   transform: translateZ(-200px) rotateY(0deg);
+}
+.cube-face-right {
+  background: linear-gradient(
+    to bottom right,
+    rgb(107, 243, 223),
+    rgb(16, 1, 114)
+  );
+  transform: rotatey(90deg) translatez(200px);
 }
 
 .cube-face-top {
