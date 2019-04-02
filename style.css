@@ -75,7 +75,8 @@ input[type="email"] {
 input[type="text"]:active,
 input[type="text"]:focus,
 input[type="password"]:active,
-input[type="password"]:focus input[type="email"]:active,
+input[type="password"]:focus,
+input[type="email"]:active,
 input[type="email"]:focus {
   outline: none;
 }
