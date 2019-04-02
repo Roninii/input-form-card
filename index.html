@@ -8,29 +8,34 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="scene">
-        <div class="cube">
-          <div class="cube-face cube-face-front">
-            <label for="username" class="label">Username</label>
-            <input type="text" class="form" id="username" />
-            <label for="password" class="label">Password</label>
-            <input type="text" class="form" id="password" />
-            <div class="buttons">
-              <input type="submit" class="button" value="Log In" />
-              <button class="button">Register</button>
-            </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" />
           </div>
-          <div class="cube-face cube-face-right"></div>
-          <div class="cube-face cube-face-top">
-            <label for="register-username" class="label">Username</label>
-            <input type="text" class="form" id="register-username" />
-            <label for="register-password" class="label">Password</label>
-            <input type="text" class="form" id="register-password" />
-            <div class="buttons">
-              <button class="button">Go Back</button>
-              <input type="submit" class="button" value="Register" />
-            </div>
+          <div>
+            <label for="password">Password:</label>
+            <input type="text" id="password" />
+          </div>
+          <div>
+            <button class="button">Login</button>
+            <button class="button">Register</button>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <div>
+            <label for="register-username">Username:</label>
+            <input type="text" id="register-username" />
+          </div>
+          <div>
+            <label for="register-password">Password:</label>
+            <input type="text" id="register-password" />
+          </div>
+          <div>
+            <button class="button">Go Back</button>
+            <button class="button">Register</button>
           </div>
         </div>
       </div>

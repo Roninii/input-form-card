@@ -1,97 +1,83 @@
-:root {
-  --font: #fafafa;
-}
-.container {
-  margin: 25vh 25vw;
-}
-.scene {
-  width: 50vw;
-  height: 400px;
-  margin: 0 auto;
-  perspective: 2000px;
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  max-width: 500px;
+  height: 35vh;
+  perspective: 1000px;
+  margin: 25px auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
 }
 
-.cube {
+.flip-card-inner {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
-  transition: all 1s;
 }
 
-.cube-face {
+.flip-card.face .flip-card-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  border-radius: 10px;
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
 
-.cube-face-front {
-  background: linear-gradient(to bottom, rgb(107, 243, 223), rgb(16, 1, 114));
-  color: var(--font);
-  transform: rotateY(0deg) translateZ(200px);
-}
-.cube.show-front {
-  transform: translateZ(-200px) rotateY(0deg);
-}
-.cube-face-right {
-  background: linear-gradient(
-    to bottom right,
-    rgb(107, 243, 223),
-    rgb(16, 1, 114)
-  );
-  transform: rotatey(90deg) translatez(200px);
+.flip-card-front {
+  background: linear-gradient(to bottom, rgb(107, 243, 223), rgb(115, 1, 163));
+  color: #fafafa;
 }
 
-.cube-face-top {
-  background: linear-gradient(to top, rgb(107, 243, 223), rgb(16, 1, 114));
-  color: var(--font);
-  transform: rotateX(90deg) translateZ(200px);
-}
-.cube.show-top {
-  transform: translateZ(-200px) rotateX(-90deg);
+.flip-card-back {
+  background: linear-gradient(to bottom, rgb(107, 243, 223), rgb(115, 1, 163));
+  color: white;
+  transform: rotateX(180deg);
 }
 
-.form {
+input[type="text"] {
+  margin: 15px auto;
+  padding: 5px;
+  width: 50%;
   background: none;
   border: none;
   border-bottom: 1px solid #fafafa;
-  display: block;
-  height: 1.25rem;
-  width: 75%;
-  margin: 0.5rem;
+  color: #fafafa;
+  font-size: 1.2rem;
 }
-.form:active,
-.form:focus {
+input[type="text"]:active,
+input[type="text"]:focus {
   outline: none;
-}
-.label {
-  justify-self: flex-start;
-}
-
-.buttons {
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .button {
-  display: inline-block;
-  border: none;
-  border-radius: 0.15rem;
-  background: rgb(141, 255, 238);
-  color: #333;
-  font-family: sans-serif;
-  font-weight: bold;
-  margin: 5px;
+  width: 100px;
   height: 25px;
-  width: 75px;
-  transition: background 0.1s;
+  border-radius: 3px;
+  border: none;
+  background-color: rgb(115, 1, 163);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.15rem;
+  transition: 0.25s;
 }
 .button:hover {
   cursor: pointer;
-  background: rgb(193, 255, 246);
+  background-color: rgb(125, 1, 175);
+  transform: scale(1.1);
+}
+.button:active,
+.button:focus {
+  outline: none;
 }
