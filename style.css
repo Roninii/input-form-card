@@ -23,16 +23,16 @@
   position: absolute;
   width: 400px;
   height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .cube-face-front {
   background: linear-gradient(to bottom, rgb(107, 243, 223), rgb(16, 1, 114));
   color: var(--font);
   transform: translateZ(200px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .cube.show-front {
   transform: translateZ(-200px) rotateY(0deg);
@@ -81,4 +81,9 @@
   margin: 5px;
   height: 25px;
   width: 75px;
+  transition: background 0.1s;
+}
+.button:hover {
+  cursor: pointer;
+  background: rgb(193, 255, 246);
 }

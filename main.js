@@ -1,9 +1,14 @@
-const [submit, register] = document.getElementsByClassName("button");
+const [logIn, showRegister, goBack, register] = document.getElementsByClassName(
+  "button"
+);
 const [cube] = document.getElementsByClassName("cube");
-submit.addEventListener("click", logIn);
-register.addEventListener("click", showRegister);
+logIn.addEventListener("click", submitLogIn);
+goBack.addEventListener("click", toggleShowRegister);
+showRegister.addEventListener("click", toggleShowRegister);
+register.addEventListener("click", submitRegister);
 
-function logIn() {}
-function showRegister() {
+function submitLogIn() {}
+function submitRegister() {}
+function toggleShowRegister() {
   cube.classList.toggle("show-top");
 }
