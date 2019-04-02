@@ -2,7 +2,7 @@
   --font: #fafafa;
 }
 .container {
-  margin: 25% auto;
+  margin: 25vh 25vw;
 }
 .scene {
   width: 50vw;
@@ -17,7 +17,6 @@
   position: relative;
   transform-style: preserve-3d;
   transition: all 1s;
-  box-shadow: 5px 5px solid #333;
 }
 
 .cube-face {
